@@ -1,0 +1,178 @@
+
+project_structure = {
+    'index.html': """<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto Incrível</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Produto Incrível</h1>
+            <p>A solução perfeita para suas necessidades!</p>
+            <a href="#sobre" class="btn">Saiba Mais</a>
+        </div>
+    </header>
+
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre o Produto</h2>
+            <p>Nosso produto é a melhor solução para o seu problema. Com tecnologia de ponta e design inovador, você terá tudo o que precisa ao seu alcance.</p>
+        </div>
+    </section>
+
+    <section id="funcionalidades">
+        <div class="container">
+            <h2>Funcionalidades</h2>
+            <ul>
+                <li>Alta performance</li>
+                <li>Design moderno</li>
+                <li>Fácil de usar</li>
+                <li>Suporte 24/7</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="testemunhos">
+        <div class="container">
+            <h2>O que nossos clientes dizem</h2>
+            <blockquote>
+                "Este produto mudou a minha vida! Recomendo a todos!"
+                <cite>- Cliente Satisfeito</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form action="">
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu Email" required>
+                <textarea placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Produto Incrível. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>""",
+    'css/styles.css': """body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 45px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    color: #ffffff;
+    background: #e8491d;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+section {
+    padding: 20px 0;
+    text-align: center;
+}
+
+section#sobre p {
+    width: 70%;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #35424a;
+    color: #ffffff;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 20px 0;
+}
+
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 70%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}""",
+}
+
+# Save the project structure as files
+import os
+
+project_path = '/mnt/data/landing_page_project/'
+
+os.makedirs(project_path, exist_ok=True)
+
+for path, content in project_structure.items():
+    file_path = os.path.join(project_path, path)
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
+    with open(file_path, 'w', encoding='utf-8') as file:
+        file.write(content)
+
+project_path
